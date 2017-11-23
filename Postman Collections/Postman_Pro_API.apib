@@ -181,7 +181,15 @@ For information on API terms of use and privacy, refer to our policy document at
 ## Collections [/collections]
 
 ### All Collections [GET]
-TODO: Add Description
+The `/collections` endpoint returns a list of all [collections](https://www.getpostman.com/docs/collections) that are accessible by you. The list includes your own collections and the collections that you have subscribed to.
+
+
+
+The response contains an array of collection information containing the `name`, `id`, `owner` and `uid` of each collection.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request 
     + Headers
@@ -200,7 +208,15 @@ TODO: Add Description
 
 
 ### Create Collection [POST]
-TODO: Add Description
+This endpoint allows you to create collections using the Postman Collection v2 format. For more information about the v2 schema, check the format [here](https://schema.getpostman.com/json/collection/v2.0.0/docs/index.html).
+
+
+
+On successful creation of the collection, the response returns the collection `name`, `id` and the `uid`.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request (application/json)
     + Headers
@@ -281,7 +297,11 @@ TODO: Add Description
 
 
 ### Single Collection [GET]
-TODO: Add Description
+Access the contents of a collection that is accessible to you using its unique id (`uid`).
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request 
     + Headers
@@ -300,7 +320,19 @@ TODO: Add Description
 
 
 ### Update Collection [PUT]
-TODO: Add Description
+This endpoint allows you to update an existing collection using the Postman Collection v2 format. For more information about the v2 schema, check the format [here](https://schema.getpostman.com/json/collection/v2.0.0/docs/index.html).
+
+
+
+On successful updation of the collection, the response returns the collection `name`, `id` and `uid`.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
+
+
+
+Note: Please be careful when trying to update the collection, as the existing collection will be replaced by the request body.
 
 + Request (application/json)
     + Headers
@@ -340,7 +372,15 @@ TODO: Add Description
 
 
 ### Delete Collection [DELETE]
-TODO: Add Description
+This endpoint allows you to delete an existing collection.
+
+
+
+On successful deletion of the collection, the response returns the `id` and `uid`.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request 
     + Headers
@@ -365,7 +405,15 @@ TODO: Add Description
 ## Environments [/environments]
 
 ### All Environments [GET]
-TODO: Add Description
+The `/environments` endpoint returns a list of all [environments](https://www.getpostman.com/docs/environments) that belong to you..
+
+
+
+The response contains an array of environments' information containing the `name`, `id`, `owner` and `uid` of each environment.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request 
     + Headers
@@ -384,7 +432,91 @@ TODO: Add Description
 
 
 ### Create Environment [POST]
-TODO: Add Description
+A sample body is added to the request that conforms to the following JSON schema:
+
+
+
+```json
+
+{
+
+  "type": "object",
+
+  "properties": {
+
+    "environment": {
+
+      "type": "object",
+
+      "properties": {
+
+        "name": {
+
+              "type": "string",
+
+              "maxLength": 254,
+
+              "minLength": 1
+
+            },
+
+        "values": {
+
+          "type": "array",
+
+          "maxItems": 100,
+
+          "additionalItems": false,
+
+          "items": {
+
+              "type": "object",
+
+              "properties": {
+
+                "key": {
+
+                  "type": "string",
+
+                  "maxLength": 254
+
+                  "minLength": 1
+
+                },
+
+                "value": { "type": "string" },
+
+                "enabled": { "type": "boolean" }
+
+              },
+
+              "required": ["key", "value"]
+
+            }
+
+        }
+
+      },
+
+      "required": ["name"]
+
+    }
+
+  },
+
+  "required": ["environment"]
+
+}
+
+```
+
+
+
+On successful creation of the environment, the API returns the environment name and `id`.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request (application/json)
     + Headers
@@ -431,7 +563,11 @@ TODO: Add Description
 ## Environments 2483749 12f0c5a7 A99b Fbd1 D5b8 1383c3f210fa [/environments/2483749-12f0c5a7-a99b-fbd1-d5b8-1383c3f210fa]
 
 ### Single Environment [GET]
-TODO: Add Description
+Access the contents of an environment that is accessible to you using its unique id (`uid`).
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request 
     + Headers
@@ -450,7 +586,113 @@ TODO: Add Description
 
 
 ### Update Environment [PUT]
-TODO: Add Description
+This endpoint replaces an existing environment.
+
+
+
+A sample body is added to the request that conforms to the following JSON schema:
+
+
+
+```json
+
+{
+
+    'type': 'object',
+
+    'properties': {
+
+      'environment': {
+
+        'type': 'object',
+
+        'properties': {
+
+          'name': {
+
+                'type': 'string',
+
+                'maxLength': 254,
+
+                'minLength': 1
+
+              },
+
+          'values': {
+
+            'type': 'array',
+
+            'maxItems': 100,
+
+            'additionalItems': false,
+
+            'items': {
+
+                'type': 'object',
+
+                'properties': {
+
+                  'key': {
+
+                    'type': 'string',
+
+                    'maxLength': 254,
+
+                    'minLength': 1
+
+                  },
+
+                  'value': {
+
+                    'type': 'string'
+
+                    'maxLength': 254,
+
+                    'minLength': 1
+
+                  },
+
+                  'type': { 'type': 'string' },
+
+                  'enabled': { 'type': 'boolean' }
+
+                },
+
+                'required': [
+
+                  'key',
+
+                  'value'
+
+                ]
+
+              }
+
+          }
+
+        }
+
+      }
+
+    },
+
+    'required': [
+
+        'environment'
+
+    ]
+
+  }
+
+```
+
+
+
+On successful updation of the environment, the API returns the environment name and `id`.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request (application/json)
     + Headers
@@ -487,7 +729,11 @@ TODO: Add Description
 
 
 ### Delete Environment [DELETE]
-TODO: Add Description
+This endpoint allows you to delete a single environment based on an environment's unique `uid`.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request 
     + Headers
@@ -519,7 +765,11 @@ TODO: Add Description
 ## Mocks [/mocks]
 
 ### All Mocks [GET]
-TODO: Add Description
+This endpoint fetches all the mocks that you have created.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request 
     + Headers
@@ -538,7 +788,11 @@ TODO: Add Description
 
 
 ### Create Mock [POST]
-TODO: Add Description
+This endpoint allows you to create a mock on a collection. You can also provide an environment UID to resolve any environment variables in the collection.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request (application/json)
     + Headers
@@ -573,7 +827,11 @@ TODO: Add Description
 
 
 ### Single Mock [GET]
-TODO: Add Description
+This endpoint fetches you the basic information about a single mock using its `uid`.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request 
     + Headers
@@ -592,7 +850,11 @@ TODO: Add Description
 
 
 ### Delete Mock [DELETE]
-TODO: Add Description
+This endpoint allows you to delete an existing mock using its `uid`.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request 
     + Headers
@@ -617,7 +879,15 @@ TODO: Add Description
 ## Monitors [/monitors]
 
 ### All Monitors [GET]
-TODO: Add Description
+The `/monitors` endpoint returns a list of all [monitors](https://monitor.getpostman.com/) that are accessible by you.
+
+
+
+The response contains an array of monitors information containing the `name`, `id`, `owner` and `uid` of each monitor.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request 
     + Headers
@@ -636,7 +906,45 @@ TODO: Add Description
 
 
 ### Create Monitor [POST]
-TODO: Add Description
+This endpoint allows you to create a monitor.
+
+
+
+Some sample `cron` values are:
+
+
+
+| Frequency                  | Cron Pattern   |
+
+|-----------------------|----------------|
+
+| Every 5 minutes       | `*/5 * * * *`  |
+
+| Every 30 minutes     | `*/30 * * * *` |
+
+| Every Hour         | `0 */1 * * *`  |
+
+| Every 6 Hours      | `0 */6 * * *`  |
+
+| Every day at 5pm    | `0 17 * * *`   |
+
+| Every Monday at 12pm  | `0 12 * * MON` |
+
+| Every weekday (Monday - Friday) at 6am | `0 6 * * MON-FRI` |
+
+
+
+Note: Currently, you can only create monitors at some limited schedules. You can head to [Postman Monitors](https://monitor.getpostman.com) to see the allowed schedules. 
+
+
+
+For more information about the format of the `timezone` value, check this [list of time zones.](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+
+
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request (application/json)
     + Headers
@@ -683,7 +991,11 @@ TODO: Add Description
 
 
 ### Single Monitor [GET]
-TODO: Add Description
+This endpoint fetches you basic information about the monitor using its `uid`.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request 
     + Headers
@@ -709,7 +1021,43 @@ TODO: Add Description
 
 
 ### Update Monitor [PUT]
-TODO: Add Description
+This endpoint allows you to update a monitor using its `uid`. Only the monitor name and its schedule can be updated.
+
+
+
+Some example `cron` values are:
+
+
+
+| Frequency                  | Cron Pattern   |
+
+|-----------------------|----------------|
+
+| Every 5 minutes       | `*/5 * * * *`  |
+
+| Every 30 minutes     | `*/30 * * * *` |
+
+| Every Hour         | `0 */1 * * *`  |
+
+| Every 6 Hours      | `0 */6 * * *`  |
+
+| Every day at 5pm    | `0 17 * * *`   |
+
+| Every Monday at 12pm  | `0 12 * * MON` |
+
+| Every weekday (Monday - Friday) at 6am | `0 6 * * MON-FRI` |
+
+
+
+Note: Currently, you can only create monitors at some limited schedules. You can head to [Postman Monitors](https://monitor.getpostman.com) to see the allowed schedules. 
+
+
+
+For more information about the format of the `timezone` value, check this [list of time zones.](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request (application/json)
     + Headers
@@ -728,7 +1076,11 @@ TODO: Add Description
 
 
 ### Delete Monitor [DELETE]
-TODO: Add Description
+This endpoint can be used to delete an existing monitor using its `uid`.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request 
     + Headers
@@ -761,7 +1113,11 @@ TODO: Add Description
 
 
 ### Run a Monitor [POST]
-TODO: Add Description
+This endpoint will run the monitor instantly and wait for the monitor to run completely. It responds with the run results.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request 
     + Headers
@@ -782,7 +1138,11 @@ TODO: Add Description
 ## Me [/me]
 
 ### API Key Owner [GET]
-TODO: Add Description
+The `/me` endpoint allows you to fetch relevant information pertaining to the API Key being used.
+
+
+
+> Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 
 + Request 
     + Headers

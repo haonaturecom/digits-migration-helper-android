@@ -1175,10 +1175,10 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `id` (string, required) 
-+ `name` (string, required) 
-+ `owner` (string, required) 
-+ `uid` (string, required) 
++ `id`: `dac5eac9-148d-a32e-b76b-3edee9da28f7` (string, required) 
++ `name`: `Cloud API` (string, required) 
++ `owner`: `631643` (string, required) 
++ `uid`: `631643-dac5eac9-148d-a32e-b76b-3edee9da28f7` (string, required) 
 
 
 ## Single CollectionResponse (object)
@@ -1192,56 +1192,67 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `variables` (array[string], required) 
-+ `info` (Info, required) 
-+ `item` (array[Item], required) 
++ `variables`: `[]` (array[string], required) 
++ `info`: `[]` (Info, required) 
++ `item`: `[]` (array[Item], required) 
 
 
 ## Info (object)
 
 
 ### Properties
-+ `name` (string, required) 
-+ `_postman_id` (string, required) 
-+ `description` (string, required) 
-+ `schema` (string, required) 
++ `name`: `Sample Collection` (string, required) 
++ `_postman_id`: `f2e66c2e-5297-e4a5-739e-20cbb90900e3` (string, required) 
++ `description`: `This is a sample collection that makes a tiny request to Postman Echo service to get the list of request headers sent by a HTTP client.` (string, required) 
++ `schema`: `https://schema.getpostman.com/json/collection/v2.0.0/collection.json` (string, required) 
 
 
 ## Item (object)
 
 
 ### Properties
-+ `id` (string, required) 
-+ `name` (string, required) 
-+ `event` (array[Event], required) 
-+ `request` (Request, required) 
-+ `response` (array[string], required) 
++ `id`: `82ee981b-e19f-962a-401e-ea34ebfb4848` (string, required) 
++ `name`: `Request Headers` (string, required) 
++ `event`: `Request Headers` (array[Event], required) 
++ `request`: `Request Headers` (Request, required) 
++ `response`: `[]` (array[string], required) 
 
 
 ## Event (object)
 
 
 ### Properties
-+ `listen` (string, required) 
-+ `script` (Script, required) 
++ `listen`: `test` (string, required) 
++ `script`: `test` (Script, required) 
 
 
 ## Script (object)
 
 
 ### Properties
-+ `type` (string, required) 
-+ `exec` (string, required) 
++ `type`: `text/javascript` (string, required) 
++ `exec`: `var responseJSON;
+try {
+    tests["Body contains headers"] = responseBody.has("headers");
+    responseJSON = JSON.parse(responseBody);
+    tests["Header contains host"] = "host" in responseJSON.headers;
+    tests["Header contains test parameter sent as part of request header"] = "my-sample-header" in responseJSON.headers;
+}
+catch (e) { }
+
+
+
+` (string, required) 
 
 
 ## Request (object)
 
 
 ### Properties
-+ `url` (string, required) 
-+ `method` (string, required) 
-+ `header` (array[Header], required) 
-+ `body` (Body, required) 
++ `url`: `https://echo.getpostman.com/headers` (string, required) 
++ `method`: `GET` (string, required) 
++ `header`: `GET` (array[Header], required) 
++ `body`: `GET` (Body, required) 
 + `description` (string, required) 
 
 
@@ -1249,8 +1260,8 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `key` (string, required) 
-+ `value` (string, required) 
++ `key`: `my-sample-header` (string, required) 
++ `value`: `Lorem ipsum dolor sit amet` (string, required) 
 + `description` (string, required) 
 
 
@@ -1258,8 +1269,8 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `mode` (string, required) 
-+ `formdata` (array[string], required) 
++ `mode`: `formdata` (string, required) 
++ `formdata`: `[]` (array[string], required) 
 
 
 ## Create CollectionRequest (object)
@@ -1273,68 +1284,70 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `variables` (array[string], required) 
-+ `info` (Info13, required) 
-+ `item` (array[Item14], required) 
++ `variables`: `[]` (array[string], required) 
++ `info`: `[]` (Info13, required) 
++ `item`: `[]` (array[Item14], required) 
 
 
 ## Info13 (object)
 
 
 ### Properties
-+ `name` (string, required) 
-+ `description` (string, required) 
-+ `schema` (string, required) 
++ `name`: `Sample Collection` (string, required) 
++ `description`: `This is just a sample collection.` (string, required) 
++ `schema`: `https://schema.getpostman.com/json/collection/v2.0.0/collection.json` (string, required) 
 
 
 ## Item14 (object)
 
 
 ### Properties
-+ `name` (string, required) 
++ `name`: `This is a folder` (string, required) 
 + `description` (string, optional) 
 + `item` (array[Item15], optional) 
 + `request` (Request19, optional) 
-+ `response` (array[string], optional) 
++ `response`: `[]` (array[string], optional) 
 
 
 ## Item15 (object)
 
 
 ### Properties
-+ `name` (string, required) 
-+ `request` (Request16, required) 
-+ `response` (array[string], required) 
++ `name`: `Sample POST Request` (string, required) 
++ `request`: `Sample POST Request` (Request16, required) 
++ `response`: `[]` (array[string], required) 
 
 
 ## Request16 (object)
 
 
 ### Properties
-+ `url` (string, required) 
-+ `method` (string, required) 
-+ `header` (array[Header], required) 
-+ `body` (Body18, required) 
-+ `description` (string, required) 
++ `url`: `echo.getpostman.com/post` (string, required) 
++ `method`: `POST` (string, required) 
++ `header`: `POST` (array[Header], required) 
++ `body`: `POST` (Body18, required) 
++ `description`: `This is a sample POST Request` (string, required) 
 
 
 ## Body18 (object)
 
 
 ### Properties
-+ `mode` (string, required) 
-+ `raw` (string, required) 
++ `mode`: `raw` (string, required) 
++ `raw`: `{
+    "data": "123"
+}` (string, required) 
 
 
 ## Request19 (object)
 
 
 ### Properties
-+ `url` (string, required) 
-+ `method` (string, required) 
-+ `header` (array[string], required) 
-+ `body` (Body, required) 
-+ `description` (string, required) 
++ `url`: `echo.getpostman.com/get` (string, required) 
++ `method`: `GET` (string, required) 
++ `header`: `[]` (array[string], required) 
++ `body`: `[]` (Body, required) 
++ `description`: `This is a sample GET Request` (string, required) 
 
 
 ## Create CollectionResponse (object)
@@ -1348,9 +1361,9 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `id` (string, required) 
-+ `name` (string, required) 
-+ `uid` (string, required) 
++ `id`: `2412a72c-1d8e-491b-aced-93809c0e94e9` (string, required) 
++ `name`: `Sample Collection` (string, required) 
++ `uid`: `5852-2412a72c-1d8e-491b-aced-93809c0e94e9` (string, required) 
 
 
 ## Update CollectionRequest (object)
@@ -1364,31 +1377,31 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `variables` (array[string], required) 
-+ `info` (Info, required) 
-+ `item` (array[Item26], required) 
++ `variables`: `[]` (array[string], required) 
++ `info`: `[]` (Info, required) 
++ `item`: `[]` (array[Item26], required) 
 
 
 ## Item26 (object)
 
 
 ### Properties
-+ `name` (string, required) 
-+ `_postman_id` (string, optional) 
++ `name`: `This is a folder` (string, required) 
++ `_postman_id`: `da6d7eb6-9ee3-4522-aa01-6d7c738ecd56` (string, optional) 
 + `description` (string, optional) 
 + `item` (array[Item27], optional) 
 + `request` (Request19, optional) 
-+ `response` (array[string], optional) 
++ `response`: `[]` (array[string], optional) 
 
 
 ## Item27 (object)
 
 
 ### Properties
-+ `_postman_id` (string, required) 
-+ `name` (string, required) 
-+ `request` (Request16, required) 
-+ `response` (array[string], required) 
++ `_postman_id`: `b5e8d7dd-909c-4ba7-aef4-8609bc50b586` (string, required) 
++ `name`: `Sample POST Request` (string, required) 
++ `request`: `Sample POST Request` (Request16, required) 
++ `response`: `[]` (array[string], required) 
 
 
 ## Update CollectionResponse (object)
@@ -1409,8 +1422,8 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `id` (string, required) 
-+ `uid` (string, required) 
++ `id`: `a14c6da7-afba-4a84-bf22-4febbaaced6c` (string, required) 
++ `uid`: `5852-a14c6da7-afba-4a84-bf22-4febbaaced6c` (string, required) 
 
 
 ## All EnvironmentsResponse (object)
@@ -1424,10 +1437,10 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `id` (string, required) 
-+ `name` (string, required) 
-+ `owner` (string, required) 
-+ `uid` (string, required) 
++ `id`: `357668d2-84f1-2264-438b-113095359f80` (string, required) 
++ `name`: `Postman Cloud API` (string, required) 
++ `owner`: `631643` (string, required) 
++ `uid`: `631643-357668d2-84f1-2264-438b-113095359f80` (string, required) 
 
 
 ## Single EnvironmentResponse (object)
@@ -1441,20 +1454,20 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `id` (string, required) 
-+ `name` (string, required) 
-+ `values` (array[Value], required) 
++ `id`: `84a119b6-f4b1-9120-5f11-a73b17818d70` (string, required) 
++ `name`: `Postman Cloud API.template` (string, required) 
++ `values`: `Postman Cloud API.template` (array[Value], required) 
 
 
 ## Value (object)
 
 
 ### Properties
-+ `key` (string, required) 
++ `key`: `postman_api_key` (string, required) 
 + `value` (string, required) 
-+ `type` (string, required) 
-+ `enabled` (boolean, required) 
-+ `hovered` (boolean, required) 
++ `type`: `text` (string, required) 
++ `enabled`: `true` (boolean, required) 
++ `hovered`: `false` (boolean, required) 
 
 
 ## Create EnvironmentRequest (object)
@@ -1468,16 +1481,16 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `name` (string, required) 
-+ `values` (array[Value44], required) 
++ `name`: `Sample Environment Name (required)` (string, required) 
++ `values`: `Sample Environment Name (required)` (array[Value44], required) 
 
 
 ## Value44 (object)
 
 
 ### Properties
-+ `key` (string, required) 
-+ `value` (string, required) 
++ `key`: `variable_name_1` (string, required) 
++ `value`: `The value of the variable` (string, required) 
 
 
 ## Create EnvironmentResponse (object)
@@ -1491,9 +1504,9 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `id` (string, required) 
-+ `name` (string, required) 
-+ `uid` (string, required) 
++ `id`: `f158266e-306b-4702-a2b9-e4ede7878b7a` (string, required) 
++ `name`: `Sample Environment Name (required)` (string, required) 
++ `uid`: `5665-f158266e-306b-4702-a2b9-e4ede7878b7a` (string, required) 
 
 
 ## Update EnvironmentRequest (object)
@@ -1521,8 +1534,8 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `id` (string, required) 
-+ `uid` (string, required) 
++ `id`: `4dfb28a4-9a6c-4ce4-b31a-17c26a8b2cce` (string, required) 
++ `uid`: `5852-4dfb28a4-9a6c-4ce4-b31a-17c26a8b2cce` (string, required) 
 
 
 ## All MocksResponse (object)
@@ -1536,12 +1549,12 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `id` (string, required) 
-+ `owner` (string, required) 
-+ `uid` (string, required) 
-+ `collection` (string, required) 
-+ `mockUrl` (string, required) 
-+ `environment` (string, optional) 
++ `id`: `0fca2246-c108-41f5-8454-cc032def329f` (string, required) 
++ `owner`: `1679925` (string, required) 
++ `uid`: `1679925-0fca2246-c108-41f5-8454-cc032def329f` (string, required) 
++ `collection`: `1679925-39fee52f-b806-3ffa-1173-00a6f5b183dc` (string, required) 
++ `mockUrl`: `https://0fca2246-c108-41f5-8454-cc032def329f.mock.pstmn.io` (string, required) 
++ `environment`: `1679925-0b9e9f15-3208-a2b1-22e0-d58392f01524` (string, optional) 
 
 
 ## Single MockResponse (object)
@@ -1562,8 +1575,8 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `collection` (string, required) 
-+ `environment` (string, required) 
++ `collection`: `1679925-39fee52f-b806-3ffa-1173-00a6f5b183dc` (string, required) 
++ `environment`: `1679925-0b9e9f15-3208-a2b1-22e0-d58392f01524` (string, required) 
 
 
 ## Create MockResponse (object)
@@ -1584,8 +1597,8 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `id` (string, required) 
-+ `uid` (string, required) 
++ `id`: `0fca2246-c108-41f5-8454-cc032def329f` (string, required) 
++ `uid`: `1679925-0fca2246-c108-41f5-8454-cc032def329f` (string, required) 
 
 
 ## All MonitorsResponse (object)
@@ -1599,10 +1612,10 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `id` (string, required) 
-+ `name` (string, required) 
-+ `uid` (string, required) 
-+ `owner` (string, required) 
++ `id`: `1e6b6c77-2031-42d0-9948-76d7251b2dd1` (string, required) 
++ `name`: `Batman & Sherlock Holmes Monitor` (string, required) 
++ `uid`: `5852-1e6b6c77-2031-42d0-9948-76d7251b2dd1` (string, required) 
++ `owner`: `5852` (string, required) 
 
 
 ## Single MonitorResponse (object)
@@ -1616,22 +1629,22 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `id` (string, required) 
-+ `name` (string, required) 
-+ `collection` (string, required) 
-+ `createdAt` (string, required) 
-+ `owner` (string, required) 
-+ `uid` (string, required) 
-+ `schedule` (Schedule, required) 
++ `id`: `1e6b6cc1-c760-48e0-968f-4bfaeeae9af1` (string, required) 
++ `name`: `Postman Echo Monitor` (string, required) 
++ `collection`: `5852-8d05dd85-222c-1452-553b-e76a531b71ed` (string, required) 
++ `createdAt`: `11/30/2016 7:10:44 AM` (string, required) 
++ `owner`: `5852` (string, required) 
++ `uid`: `5852-1e6b6cc1-c760-48e0-968f-4bfaeeae9af1` (string, required) 
++ `schedule`: `5852-1e6b6cc1-c760-48e0-968f-4bfaeeae9af1` (Schedule, required) 
 
 
 ## Schedule (object)
 
 
 ### Properties
-+ `cron` (string, required) 
-+ `timezone` (string, required) 
-+ `nextRun` (string, required) 
++ `cron`: `0 0 * * * *` (string, required) 
++ `timezone`: `Asia/Calcutta` (string, required) 
++ `nextRun`: `11/30/2016 9:30:00 AM` (string, required) 
 
 
 ## Create MonitorRequest (object)
@@ -1645,18 +1658,18 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `name` (string, required) 
-+ `schedule` (Schedule71, required) 
-+ `collection` (string, required) 
-+ `environment` (string, required) 
++ `name`: `This is a Monitor Name` (string, required) 
++ `schedule`: `This is a Monitor Name` (Schedule71, required) 
++ `collection`: `5852-8d05dd85-222c-1452-553b-e76a531b71ed` (string, required) 
++ `environment`: `5852-8a4c21ea-2a36-40d1-a82d-d717fac9d6ef` (string, required) 
 
 
 ## Schedule71 (object)
 
 
 ### Properties
-+ `cron` (string, required) 
-+ `timezone` (string, required) 
++ `cron`: `0 0 * * *` (string, required) 
++ `timezone`: `Asia/Kolkata` (string, required) 
 
 
 ## Create MonitorResponse (object)
@@ -1670,9 +1683,9 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `id` (string, required) 
-+ `name` (string, required) 
-+ `uid` (string, required) 
++ `id`: `1e6b6dfd-7ba4-4590-9ee1-5948102d7797` (string, required) 
++ `name`: `Monitor Name` (string, required) 
++ `uid`: `5852-1e6b6dfd-7ba4-4590-9ee1-5948102d7797` (string, required) 
 
 
 ## Update MonitorRequest (object)
@@ -1686,8 +1699,8 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `name` (string, required) 
-+ `schedule` (Schedule71, required) 
++ `name`: `Updated Monitor Name` (string, required) 
++ `schedule`: `Updated Monitor Name` (Schedule71, required) 
 
 
 ## Update MonitorResponse (object)
@@ -1708,8 +1721,8 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `id` (string, required) 
-+ `uid` (string, required) 
++ `id`: `1e6b8957-35f9-42a0-8d2f-f03d7085b3d2` (string, required) 
++ `uid`: `5852-1e6b8957-35f9-42a0-8d2f-f03d7085b3d2` (string, required) 
 
 
 ## Run a MonitorResponse (object)
@@ -1733,13 +1746,13 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `jobId` (string, required) 
-+ `monitorId` (string, required) 
-+ `name` (string, required) 
-+ `collectionUid` (string, required) 
-+ `status` (string, required) 
-+ `startedAt` (string, required) 
-+ `finishedAt` (string, required) 
++ `jobId`: `1e6ba2e3-1aaf-4c10-bd5f-905943284b2a` (string, required) 
++ `monitorId`: `1e6b8970-fd13-4480-b011-b3b3e3cd271d` (string, required) 
++ `name`: `Sample Collection monitor 1 #56` (string, required) 
++ `collectionUid`: `5852-1d3daef4-2037-4584-ab86-bafd8c8f8a55` (string, required) 
++ `status`: `failed` (string, required) 
++ `startedAt`: `12/4/2016 2:30:25 PM` (string, required) 
++ `finishedAt`: `12/4/2016 2:30:26 PM` (string, required) 
 
 
 ## Stats (object)
@@ -1754,117 +1767,117 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `total` (number, required) 
-+ `failed` (number, required) 
++ `total`: `1` (number, required) 
++ `failed`: `1` (number, required) 
 
 
 ## Requests (object)
 
 
 ### Properties
-+ `total` (number, required) 
-+ `failed` (number, required) 
++ `total`: `3` (number, required) 
++ `failed`: `1` (number, required) 
 
 
 ## Execution (object)
 
 
 ### Properties
-+ `id` (number, required) 
-+ `item` (Item88, required) 
-+ `request` (Request89, required) 
-+ `response` (Response, required) 
-+ `assertions` (Assertions95, optional) 
++ `id`: `1` (number, required) 
++ `item`: `1` (Item88, required) 
++ `request`: `1` (Request89, required) 
++ `response`: `1` (Response, required) 
++ `assertions`: `1` (Assertions95, optional) 
 
 
 ## Item88 (object)
 
 
 ### Properties
-+ `id` (string, required) 
-+ `name` (string, required) 
++ `id`: `b5e8d7dd-909c-4ba7-aef4-8609bc50b586` (string, required) 
++ `name`: `Sample POST Request` (string, required) 
 
 
 ## Request89 (object)
 
 
 ### Properties
-+ `method` (string, required) 
-+ `url` (string, required) 
-+ `headers` (Headers, required) 
-+ `body` (Body91, required) 
-+ `timestamp` (string, required) 
++ `method`: `POST` (string, required) 
++ `url`: `echo.getpostman.com/post` (string, required) 
++ `headers`: `echo.getpostman.com/post` (Headers, required) 
++ `body`: `echo.getpostman.com/post` (Body91, required) 
++ `timestamp`: `12/4/2016 2:30:26 PM` (string, required) 
 
 
 ## Headers (object)
 
 
 ### Properties
-+ `content-type` (string, required) 
-+ `accept` (string, required) 
-+ `accept-encoding` (string, required) 
-+ `content-length` (number, required) 
++ `content-type`: `application/json` (string, required) 
++ `accept`: `*/*` (string, required) 
++ `accept-encoding`: `gzip, deflate` (string, required) 
++ `content-length`: `18` (number, required) 
 
 
 ## Body91 (object)
 
 
 ### Properties
-+ `contentLength` (number, required) 
-+ `mode` (string, required) 
++ `contentLength`: `18` (number, required) 
++ `mode`: `raw` (string, required) 
 
 
 ## Response (object)
 
 
 ### Properties
-+ `code` (number, required) 
-+ `body` (Body93, required) 
-+ `responseTime` (number, required) 
-+ `responseSize` (number, required) 
-+ `headers` (Headers94, required) 
++ `code`: `200` (number, required) 
++ `body`: `200` (Body93, required) 
++ `responseTime`: `26` (number, required) 
++ `responseSize`: `298` (number, required) 
++ `headers`: `298` (Headers94, required) 
 
 
 ## Body93 (object)
 
 
 ### Properties
-+ `contentLength` (number, required) 
++ `contentLength`: `298` (number, required) 
 
 
 ## Headers94 (object)
 
 
 ### Properties
-+ `date` (string, required) 
-+ `content-type` (string, required) 
-+ `transfer-encoding` (string, required) 
-+ `connection` (string, required) 
-+ `content-encoding` (string, required) 
++ `date`: `Sun, 04 Dec 2016 14:30:26 GMT` (string, required) 
++ `content-type`: `application/json; charset=utf-8` (string, required) 
++ `transfer-encoding`: `chunked` (string, required) 
++ `connection`: `keep-alive` (string, required) 
++ `content-encoding`: `gzip` (string, required) 
 
 
 ## Assertions95 (object)
 
 
 ### Properties
-+ `Status code is 400` (boolean, required) 
++ `Status code is 400`: `false` (boolean, required) 
 
 
 ## Failure (object)
 
 
 ### Properties
-+ `executionId` (number, required) 
-+ `name` (string, required) 
-+ `message` (string, required) 
-+ `assertion` (Assertion, required) 
++ `executionId`: `2` (number, required) 
++ `name`: `AssertionError` (string, required) 
++ `message`: `Expected 'Status code is 400' to be truthy` (string, required) 
++ `assertion`: `Expected 'Status code is 400' to be truthy` (Assertion, required) 
 
 
 ## Assertion (object)
 
 
 ### Properties
-+ `Status code is 400` (boolean, required) 
++ `Status code is 400`: `false` (boolean, required) 
 
 
 ## API Key OwnerResponse (object)
@@ -1878,5 +1891,5 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ### Properties
-+ `id` (string, required) 
++ `id`: `631643` (string, required) 
 

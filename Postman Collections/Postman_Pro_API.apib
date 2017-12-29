@@ -356,6 +356,10 @@ Note: Please be careful when trying to update the collection, as the existing co
 
 
 
+    + Body
+
+            {"error":{"name":"malformedRequestError","message":"Missing required property: name at info"}}
+
 
 + Response 403 
 
@@ -363,12 +367,20 @@ Note: Please be careful when trying to update the collection, as the existing co
 
 
 
+    + Body
+
+            {"error":{"name":"forbiddenError","message":"You do not have enough permissions to perform this action."}}
+
 
 + Response 404 
 
         Not Found
 
 
+
+    + Body
+
+            {"error":{"name":"instanceNotFoundError","message":"The specified item does not exist.","details":{"item":"collection","id":"1d3daef4-2037-4584-ab86-bafd8c8f8a54"}}}
 
 
 ### Delete Collection [DELETE]
@@ -557,6 +569,10 @@ On successful creation of the environment, the API returns the environment name 
         Bad Request
 
 
+
+    + Body
+
+            {"error":{"name":"malformedRequestError","message":"Missing required property: environment"}}
 
 
 
@@ -756,6 +772,10 @@ This endpoint allows you to delete a single environment based on an environment'
         Not Found
 
 
+
+    + Body
+
+            {"error":{"name":"instanceNotFoundError","message":"The specified environment does not exist."}}
 
 
 
@@ -982,6 +1002,10 @@ For more information about the format of the `timezone` value, check this [list 
 
 
 
+    + Body
+
+            {"error":{"name":"paramMissingError","message":"Parameter is missing in the request.","details":{"param":"monitor"}}}
+
 
 
 ## Monitors By Monitor Uid [/monitors/{monitor_uid}]
@@ -1018,6 +1042,10 @@ This endpoint fetches you basic information about the monitor using its `uid`.
         Not Found
 
 
+
+    + Body
+
+            {"error":{"name":"instanceNotFoundError","message":"The specified monitor does not exist."}}
 
 
 ### Update Monitor [PUT]
@@ -1103,6 +1131,10 @@ This endpoint can be used to delete an existing monitor using its `uid`.
         Not Found
 
 
+
+    + Body
+
+            {"error":{"name":"instanceNotFoundError","message":"The specified monitor does not exist."}}
 
 
 
@@ -1404,6 +1436,45 @@ catch (e) { }
 + `response`: `[]` (array[string], required) 
 
 
+## Update CollectionErrorResponse (object)
+
+
+### Properties
++ `error` (Error, required) 
+
+
+## Error (object)
+
+
+### Properties
++ `name`: `instanceNotFoundError` (string, required) 
++ `message`: `The specified item does not exist.` (string, required) 
++ `details`: `The specified item does not exist.` (Details, required) 
+
+
+## Details (object)
+
+
+### Properties
++ `item`: `collection` (string, required) 
++ `id`: `1d3daef4-2037-4584-ab86-bafd8c8f8a54` (string, required) 
+
+
+## Update CollectionErrorResponse36 (object)
+
+
+### Properties
++ `error` (Error37, required) 
+
+
+## Error37 (object)
+
+
+### Properties
++ `name`: `forbiddenError` (string, required) 
++ `message`: `You do not have enough permissions to perform this action.` (string, required) 
+
+
 ## Update CollectionResponse (object)
 
 
@@ -1415,10 +1486,10 @@ catch (e) { }
 
 
 ### Properties
-+ `collection` (Collection36, required) 
++ `collection` (Collection45, required) 
 
 
-## Collection36 (object)
+## Collection45 (object)
 
 
 ### Properties
@@ -1447,10 +1518,10 @@ catch (e) { }
 
 
 ### Properties
-+ `environment` (Environment40, required) 
++ `environment` (Environment49, required) 
 
 
-## Environment40 (object)
+## Environment49 (object)
 
 
 ### Properties
@@ -1474,18 +1545,18 @@ catch (e) { }
 
 
 ### Properties
-+ `environment` (Environment43, required) 
++ `environment` (Environment52, required) 
 
 
-## Environment43 (object)
+## Environment52 (object)
 
 
 ### Properties
 + `name`: `Sample Environment Name (required)` (string, required) 
-+ `values`: `Sample Environment Name (required)` (array[Value44], required) 
++ `values`: `Sample Environment Name (required)` (array[Value53], required) 
 
 
-## Value44 (object)
+## Value53 (object)
 
 
 ### Properties
@@ -1493,14 +1564,21 @@ catch (e) { }
 + `value`: `The value of the variable` (string, required) 
 
 
+## Create EnvironmentErrorResponse (object)
+
+
+### Properties
++ `error` (Error37, required) 
+
+
 ## Create EnvironmentResponse (object)
 
 
 ### Properties
-+ `environment` (Environment46, required) 
++ `environment` (Environment57, required) 
 
 
-## Environment46 (object)
+## Environment57 (object)
 
 
 ### Properties
@@ -1513,24 +1591,31 @@ catch (e) { }
 
 
 ### Properties
-+ `environment` (Environment43, required) 
++ `environment` (Environment52, required) 
 
 
 ## Update EnvironmentResponse (object)
 
 
 ### Properties
-+ `environment` (Environment46, required) 
++ `environment` (Environment57, required) 
+
+
+## Delete EnvironmentErrorResponse (object)
+
+
+### Properties
++ `error` (Error37, required) 
 
 
 ## Delete EnvironmentResponse (object)
 
 
 ### Properties
-+ `environment` (Environment53, required) 
++ `environment` (Environment66, required) 
 
 
-## Environment53 (object)
+## Environment66 (object)
 
 
 ### Properties
@@ -1568,10 +1653,10 @@ catch (e) { }
 
 
 ### Properties
-+ `mock` (Mock59, required) 
++ `mock` (Mock72, required) 
 
 
-## Mock59 (object)
+## Mock72 (object)
 
 
 ### Properties
@@ -1590,10 +1675,10 @@ catch (e) { }
 
 
 ### Properties
-+ `mock` (Mock63, required) 
++ `mock` (Mock76, required) 
 
 
-## Mock63 (object)
+## Mock76 (object)
 
 
 ### Properties
@@ -1618,14 +1703,21 @@ catch (e) { }
 + `owner`: `5852` (string, required) 
 
 
+## Single MonitorErrorResponse (object)
+
+
+### Properties
++ `error` (Error37, required) 
+
+
 ## Single MonitorResponse (object)
 
 
 ### Properties
-+ `monitor` (Monitor67, required) 
++ `monitor` (Monitor82, required) 
 
 
-## Monitor67 (object)
+## Monitor82 (object)
 
 
 ### Properties
@@ -1651,20 +1743,20 @@ catch (e) { }
 
 
 ### Properties
-+ `monitor` (Monitor70, required) 
++ `monitor` (Monitor85, required) 
 
 
-## Monitor70 (object)
+## Monitor85 (object)
 
 
 ### Properties
 + `name`: `This is a Monitor Name` (string, required) 
-+ `schedule`: `This is a Monitor Name` (Schedule71, required) 
++ `schedule`: `This is a Monitor Name` (Schedule86, required) 
 + `collection`: `5852-8d05dd85-222c-1452-553b-e76a531b71ed` (string, required) 
 + `environment`: `5852-8a4c21ea-2a36-40d1-a82d-d717fac9d6ef` (string, required) 
 
 
-## Schedule71 (object)
+## Schedule86 (object)
 
 
 ### Properties
@@ -1672,14 +1764,84 @@ catch (e) { }
 + `timezone`: `Asia/Kolkata` (string, required) 
 
 
+## Create MonitorErrorResponse (object)
+
+
+### Properties
++ `error` (Error88, required) 
+
+
+## Error88 (object)
+
+
+### Properties
++ `name`: `paramMissingError` (string, required) 
++ `message`: `Parameter is missing in the request.` (string, required) 
++ `details`: `Parameter is missing in the request.` (Details89, required) 
+
+
+## Details89 (object)
+
+
+### Properties
++ `param`: `monitor` (string, required) 
+
+
+## Create MonitorErrorResponse90 (object)
+
+
+### Properties
++ `error` (Error91, required) 
+
+
+## Error91 (object)
+
+
+### Properties
++ `name`: `cronPatternNotAllowedError` (string, required) 
++ `message`: `The specified cron pattern is not allowed. Please check https://monitor.getpostman.com for the allowed schedules.` (string, required) 
++ `details`: `The specified cron pattern is not allowed. Please check https://monitor.getpostman.com for the allowed schedules.` (Details92, required) 
+
+
+## Details92 (object)
+
+
+### Properties
++ `pattern`: `* * * * *` (string, required) 
+
+
+## Create MonitorErrorResponse96 (object)
+
+
+### Properties
++ `error` (Error97, required) 
+
+
+## Error97 (object)
+
+
+### Properties
++ `name`: `invalidUidError` (string, required) 
++ `message`: `The specified uid is invalid.` (string, required) 
++ `details`: `The specified uid is invalid.` (Details98, required) 
+
+
+## Details98 (object)
+
+
+### Properties
++ `param`: `environment` (string, required) 
++ `uid`: `8a4c21ea-2a36-40d1-a82d-d717fac9d6ef` (string, required) 
+
+
 ## Create MonitorResponse (object)
 
 
 ### Properties
-+ `monitor` (Monitor73, required) 
++ `monitor` (Monitor103, required) 
 
 
-## Monitor73 (object)
+## Monitor103 (object)
 
 
 ### Properties
@@ -1692,32 +1854,39 @@ catch (e) { }
 
 
 ### Properties
-+ `monitor` (Monitor75, required) 
++ `monitor` (Monitor105, required) 
 
 
-## Monitor75 (object)
+## Monitor105 (object)
 
 
 ### Properties
 + `name`: `Updated Monitor Name` (string, required) 
-+ `schedule`: `Updated Monitor Name` (Schedule71, required) 
++ `schedule`: `Updated Monitor Name` (Schedule86, required) 
 
 
 ## Update MonitorResponse (object)
 
 
 ### Properties
-+ `monitor` (Monitor73, required) 
++ `monitor` (Monitor103, required) 
+
+
+## Delete MonitorErrorResponse (object)
+
+
+### Properties
++ `error` (Error37, required) 
 
 
 ## Delete MonitorResponse (object)
 
 
 ### Properties
-+ `monitor` (Monitor80, required) 
++ `monitor` (Monitor112, required) 
 
 
-## Monitor80 (object)
+## Monitor112 (object)
 
 
 ### Properties
@@ -1736,13 +1905,13 @@ catch (e) { }
 
 
 ### Properties
-+ `info` (Info83, required) 
++ `info` (Info115, required) 
 + `stats` (Stats, required) 
 + `executions` (array[Execution], required) 
 + `failures` (array[Failure], required) 
 
 
-## Info83 (object)
+## Info115 (object)
 
 
 ### Properties
@@ -1784,13 +1953,13 @@ catch (e) { }
 
 ### Properties
 + `id`: `1` (number, required) 
-+ `item`: `1` (Item88, required) 
-+ `request`: `1` (Request89, required) 
++ `item`: `1` (Item120, required) 
++ `request`: `1` (Request121, required) 
 + `response`: `1` (Response, required) 
-+ `assertions`: `1` (Assertions95, optional) 
++ `assertions`: `1` (Assertions127, optional) 
 
 
-## Item88 (object)
+## Item120 (object)
 
 
 ### Properties
@@ -1798,14 +1967,14 @@ catch (e) { }
 + `name`: `Sample POST Request` (string, required) 
 
 
-## Request89 (object)
+## Request121 (object)
 
 
 ### Properties
 + `method`: `POST` (string, required) 
 + `url`: `echo.getpostman.com/post` (string, required) 
 + `headers`: `echo.getpostman.com/post` (Headers, required) 
-+ `body`: `echo.getpostman.com/post` (Body91, required) 
++ `body`: `echo.getpostman.com/post` (Body123, required) 
 + `timestamp`: `12/4/2016 2:30:26 PM` (string, required) 
 
 
@@ -1819,7 +1988,7 @@ catch (e) { }
 + `content-length`: `18` (number, required) 
 
 
-## Body91 (object)
+## Body123 (object)
 
 
 ### Properties
@@ -1832,20 +2001,20 @@ catch (e) { }
 
 ### Properties
 + `code`: `200` (number, required) 
-+ `body`: `200` (Body93, required) 
++ `body`: `200` (Body125, required) 
 + `responseTime`: `26` (number, required) 
 + `responseSize`: `298` (number, required) 
-+ `headers`: `298` (Headers94, required) 
++ `headers`: `298` (Headers126, required) 
 
 
-## Body93 (object)
+## Body125 (object)
 
 
 ### Properties
 + `contentLength`: `298` (number, required) 
 
 
-## Headers94 (object)
+## Headers126 (object)
 
 
 ### Properties
@@ -1856,7 +2025,7 @@ catch (e) { }
 + `content-encoding`: `gzip` (string, required) 
 
 
-## Assertions95 (object)
+## Assertions127 (object)
 
 
 ### Properties

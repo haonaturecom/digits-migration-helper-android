@@ -225,61 +225,6 @@ On successful creation of the collection, the response returns the collection `n
 
     + Attributes (Create CollectionRequest)
 
-    + Body
-
-            {
-                "collection": {
-                    "variables": [],
-                    "info": {
-                        "name": "Sample Collection",
-                        "description": "This is just a sample collection.",
-                        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-                    },
-                    "item": [
-                        {
-                            "name": "This is a folder",
-                            "description": "",
-                            "item": [
-                                {
-                                    "name": "Sample POST Request",
-                                    "request": {
-                                        "url": "echo.getpostman.com/post",
-                                        "method": "POST",
-                                        "header": [
-                                            {
-                                                "key": "Content-Type",
-                                                "value": "application/json",
-                                                "description": ""
-                                            }
-                                        ],
-                                        "body": {
-                                            "mode": "raw",
-                                            "raw": "{\n\t\"data\": \"123\"\n}"
-                                        },
-                                        "description": "This is a sample POST Request"
-                                    },
-                                    "response": []
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Sample GET Request",
-                            "request": {
-                                "url": "echo.getpostman.com/get",
-                                "method": "GET",
-                                "header": [],
-                                "body": {
-                                    "mode": "formdata",
-                                    "formdata": []
-                                },
-                                "description": "This is a sample GET Request"
-                            },
-                            "response": []
-                        }
-                    ]
-                }
-            }
-
 
 + Response 200 (application/json)
     + Attributes (Create CollectionResponse)
@@ -537,24 +482,6 @@ On successful creation of the environment, the API returns the environment name 
 
     + Attributes (Create EnvironmentRequest)
 
-    + Body
-
-            {
-                "environment": {
-                    "name": "Sample Environment Name (required)",
-                    "values": [
-                        {
-                            "key": "variable_name_1",
-                            "value": "The value of the variable"
-                        },
-                        {
-                            "key": "variable_name_2",
-                            "value": ""
-                        }
-                    ]
-                }
-            }
-
 
 + Response 200 (application/json)
     + Attributes (Create EnvironmentResponse)
@@ -717,24 +644,6 @@ On successful updation of the environment, the API returns the environment name 
 
     + Attributes (Update EnvironmentRequest)
 
-    + Body
-
-            {
-                "environment": {
-                    "name": "New Name",
-                    "values": [
-                        {
-                            "key": "name",
-                            "value": "Bruce Wayne"
-                        },
-                        {
-                            "key": "occupation",
-                            "value": "Vigilante"
-                        }
-                    ]
-                }
-            }
-
 
 + Response 200 (application/json)
     + Attributes (Update EnvironmentResponse)
@@ -820,15 +729,6 @@ This endpoint allows you to create a mock on a collection. You can also provide 
             X-Api-Key:{{postman_api_key}}
 
     + Attributes (Create MockRequest)
-
-    + Body
-
-            {
-                "mock": {
-                    "collection": "1679925-39fee52f-b806-3ffa-1173-00a6f5b183dc",
-                    "environment": "1679925-0b9e9f15-3208-a2b1-22e0-d58392f01524"
-                }
-            }
 
 
 + Response 200 (application/json)
@@ -972,20 +872,6 @@ For more information about the format of the `timezone` value, check this [list 
             X-Api-Key:{{postman_api_key}}
 
     + Attributes (Create MonitorRequest)
-
-    + Body
-
-            {
-                "monitor": {
-                    "name": "This is a Monitor Name",
-                    "schedule": {
-                        "cron": "0 0 * * *",
-                        "timezone": "Asia/Kolkata"
-                    },
-                    "collection": "5852-8d05dd85-222c-1452-553b-e76a531b71ed",
-                    "environment": "5852-8a4c21ea-2a36-40d1-a82d-d717fac9d6ef"
-                }
-            }
 
 
 + Response 200 (application/json)

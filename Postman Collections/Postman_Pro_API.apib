@@ -200,7 +200,7 @@ The response contains an array of collection information containing the `name`, 
 
 
 + Response 200 (application/json)
-    + Attributes (All CollectionsResponse)
+    + Attributes (Valid Response)
 
     + Body
 
@@ -282,7 +282,7 @@ On successful creation of the collection, the response returns the collection `n
 
 
 + Response 200 (application/json)
-    + Attributes (Create CollectionResponse)
+    + Attributes (Collection Created)
 
     + Body
 
@@ -312,7 +312,7 @@ Access the contents of a collection that is accessible to you using its unique i
 
 
 + Response 200 (application/json)
-    + Attributes (Single CollectionResponse)
+    + Attributes (Valid Response2)
 
     + Body
 
@@ -343,7 +343,7 @@ Note: Please be careful when trying to update the collection, as the existing co
 
 
 + Response 200 (application/json)
-    + Attributes (Update CollectionResponse)
+    + Attributes (Collection Updated)
 
     + Body
 
@@ -403,7 +403,7 @@ On successful deletion of the collection, the response returns the `id` and `uid
 
 
 + Response 200 (application/json)
-    + Attributes (Delete CollectionResponse)
+    + Attributes (Collection Deleted)
 
     + Body
 
@@ -436,7 +436,7 @@ The response contains an array of environments' information containing the `name
 
 
 + Response 200 (application/json)
-    + Attributes (All EnvironmentsResponse)
+    + Attributes (Valid Response46)
 
     + Body
 
@@ -557,7 +557,7 @@ On successful creation of the environment, the API returns the environment name 
 
 
 + Response 200 (application/json)
-    + Attributes (Create EnvironmentResponse)
+    + Attributes (Successful Response)
 
     + Body
 
@@ -594,7 +594,7 @@ Access the contents of an environment that is accessible to you using its unique
 
 
 + Response 200 (application/json)
-    + Attributes (Single EnvironmentResponse)
+    + Attributes (Valid Response48)
 
     + Body
 
@@ -737,7 +737,7 @@ On successful updation of the environment, the API returns the environment name 
 
 
 + Response 200 (application/json)
-    + Attributes (Update EnvironmentResponse)
+    + Attributes (Successful Response)
 
     + Body
 
@@ -760,7 +760,7 @@ This endpoint allows you to delete a single environment based on an environment'
 
 
 + Response 200 (application/json)
-    + Attributes (Delete EnvironmentResponse)
+    + Attributes (Environment Deleted)
 
     + Body
 
@@ -800,7 +800,7 @@ This endpoint fetches all the mocks that you have created.
 
 
 + Response 200 (application/json)
-    + Attributes (All MocksResponse)
+    + Attributes (Successful Response67)
 
     + Body
 
@@ -832,7 +832,7 @@ This endpoint allows you to create a mock on a collection. You can also provide 
 
 
 + Response 200 (application/json)
-    + Attributes (Create MockResponse)
+    + Attributes (Successful Response69)
 
     + Body
 
@@ -862,7 +862,7 @@ This endpoint fetches you the basic information about a single mock using its `u
 
 
 + Response 200 (application/json)
-    + Attributes (Single MockResponse)
+    + Attributes (Successful Response69)
 
     + Body
 
@@ -885,7 +885,7 @@ This endpoint allows you to delete an existing mock using its `uid`.
 
 
 + Response 200 (application/json)
-    + Attributes (Delete MockResponse)
+    + Attributes (Successful Response75)
 
     + Body
 
@@ -918,7 +918,7 @@ The response contains an array of monitors information containing the `name`, `i
 
 
 + Response 200 (application/json)
-    + Attributes (All MonitorsResponse)
+    + Attributes (Successful Response77)
 
     + Body
 
@@ -989,7 +989,7 @@ For more information about the format of the `timezone` value, check this [list 
 
 
 + Response 200 (application/json)
-    + Attributes (Create MonitorResponse)
+    + Attributes (Monitor Created)
 
     + Body
 
@@ -1030,7 +1030,7 @@ This endpoint fetches you basic information about the monitor using its `uid`.
 
 
 + Response 200 (application/json)
-    + Attributes (Single MonitorResponse)
+    + Attributes (Successful Response81)
 
     + Body
 
@@ -1096,7 +1096,7 @@ For more information about the format of the `timezone` value, check this [list 
 
 
 + Response 200 (application/json)
-    + Attributes (Update MonitorResponse)
+    + Attributes (Monitor Updated)
 
     + Body
 
@@ -1119,7 +1119,7 @@ This endpoint can be used to delete an existing monitor using its `uid`.
 
 
 + Response 200 (application/json)
-    + Attributes (Delete MonitorResponse)
+    + Attributes (Monitor Deleted)
 
     + Body
 
@@ -1160,7 +1160,7 @@ This endpoint will run the monitor instantly and wait for the monitor to run com
 
 
 + Response 200 (application/json)
-    + Attributes (Run a MonitorResponse)
+    + Attributes (Monitor Run with Errors)
 
 
 
@@ -1185,7 +1185,7 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 + Response 200 (application/json)
-    + Attributes (API Key OwnerResponse)
+    + Attributes (Valid Response130)
 
     + Body
 
@@ -1196,7 +1196,7 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 # Data Structures
 
-## All CollectionsResponse (object)
+## Valid Response (object)
 
 
 ### Properties
@@ -1213,7 +1213,7 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 + `uid`: `631643-dac5eac9-148d-a32e-b76b-3edee9da28f7` (string, required) 
 
 
-## Single CollectionResponse (object)
+## Valid Response2 (object)
 
 
 ### Properties
@@ -1378,7 +1378,7 @@ catch (e) { }` (string, required)
 + `description`: `This is a sample GET Request` (string, required) 
 
 
-## Create CollectionResponse (object)
+## Collection Created (object)
 
 
 ### Properties
@@ -1432,7 +1432,7 @@ catch (e) { }` (string, required)
 + `response`: `[]` (array[string], required) 
 
 
-## Update CollectionErrorResponse (object)
+## Collection Not Found (object)
 
 
 ### Properties
@@ -1456,7 +1456,7 @@ catch (e) { }` (string, required)
 + `id`: `1d3daef4-2037-4584-ab86-bafd8c8f8a54` (string, required) 
 
 
-## Update CollectionErrorResponse36 (object)
+## Not Enough Permissions (object)
 
 
 ### Properties
@@ -1471,14 +1471,28 @@ catch (e) { }` (string, required)
 + `message`: `You do not have enough permissions to perform this action.` (string, required) 
 
 
-## Update CollectionResponse (object)
+## Malformed Request (object)
+
+
+### Properties
++ `error` (Error37, required) 
+
+
+## Collection ID Mismatch (object)
+
+
+### Properties
++ `error` (Error37, required) 
+
+
+## Collection Updated (object)
 
 
 ### Properties
 + `collection` (Collection22, required) 
 
 
-## Delete CollectionResponse (object)
+## Collection Deleted (object)
 
 
 ### Properties
@@ -1493,7 +1507,7 @@ catch (e) { }` (string, required)
 + `uid`: `5852-a14c6da7-afba-4a84-bf22-4febbaaced6c` (string, required) 
 
 
-## All EnvironmentsResponse (object)
+## Valid Response46 (object)
 
 
 ### Properties
@@ -1510,7 +1524,7 @@ catch (e) { }` (string, required)
 + `uid`: `631643-357668d2-84f1-2264-438b-113095359f80` (string, required) 
 
 
-## Single EnvironmentResponse (object)
+## Valid Response48 (object)
 
 
 ### Properties
@@ -1560,14 +1574,14 @@ catch (e) { }` (string, required)
 + `value`: `The value of the variable` (string, required) 
 
 
-## Create EnvironmentErrorResponse (object)
+## Failure Response (object)
 
 
 ### Properties
 + `error` (Error37, required) 
 
 
-## Create EnvironmentResponse (object)
+## Successful Response (object)
 
 
 ### Properties
@@ -1590,21 +1604,14 @@ catch (e) { }` (string, required)
 + `environment` (Environment52, required) 
 
 
-## Update EnvironmentResponse (object)
-
-
-### Properties
-+ `environment` (Environment57, required) 
-
-
-## Delete EnvironmentErrorResponse (object)
+## Environment Not Found (object)
 
 
 ### Properties
 + `error` (Error37, required) 
 
 
-## Delete EnvironmentResponse (object)
+## Environment Deleted (object)
 
 
 ### Properties
@@ -1619,7 +1626,7 @@ catch (e) { }` (string, required)
 + `uid`: `5852-4dfb28a4-9a6c-4ce4-b31a-17c26a8b2cce` (string, required) 
 
 
-## All MocksResponse (object)
+## Successful Response67 (object)
 
 
 ### Properties
@@ -1638,7 +1645,7 @@ catch (e) { }` (string, required)
 + `environment`: `1679925-0b9e9f15-3208-a2b1-22e0-d58392f01524` (string, optional) 
 
 
-## Single MockResponse (object)
+## Successful Response69 (object)
 
 
 ### Properties
@@ -1660,14 +1667,7 @@ catch (e) { }` (string, required)
 + `environment`: `1679925-0b9e9f15-3208-a2b1-22e0-d58392f01524` (string, required) 
 
 
-## Create MockResponse (object)
-
-
-### Properties
-+ `mock` (Mock, required) 
-
-
-## Delete MockResponse (object)
+## Successful Response75 (object)
 
 
 ### Properties
@@ -1682,7 +1682,7 @@ catch (e) { }` (string, required)
 + `uid`: `1679925-0fca2246-c108-41f5-8454-cc032def329f` (string, required) 
 
 
-## All MonitorsResponse (object)
+## Successful Response77 (object)
 
 
 ### Properties
@@ -1699,14 +1699,14 @@ catch (e) { }` (string, required)
 + `owner`: `5852` (string, required) 
 
 
-## Single MonitorErrorResponse (object)
+## Monitor Not Found (object)
 
 
 ### Properties
 + `error` (Error37, required) 
 
 
-## Single MonitorResponse (object)
+## Successful Response81 (object)
 
 
 ### Properties
@@ -1760,7 +1760,7 @@ catch (e) { }` (string, required)
 + `timezone`: `Asia/Kolkata` (string, required) 
 
 
-## Create MonitorErrorResponse (object)
+## Parameter Missing (object)
 
 
 ### Properties
@@ -1783,7 +1783,7 @@ catch (e) { }` (string, required)
 + `param`: `monitor` (string, required) 
 
 
-## Create MonitorErrorResponse90 (object)
+## Cron Pattern Not Allowed (object)
 
 
 ### Properties
@@ -1806,7 +1806,14 @@ catch (e) { }` (string, required)
 + `pattern`: `* * * * *` (string, required) 
 
 
-## Create MonitorErrorResponse96 (object)
+## Invalid Timezone (object)
+
+
+### Properties
++ `error` (Error88, required) 
+
+
+## Invalid Environment UID (object)
 
 
 ### Properties
@@ -1830,7 +1837,14 @@ catch (e) { }` (string, required)
 + `uid`: `8a4c21ea-2a36-40d1-a82d-d717fac9d6ef` (string, required) 
 
 
-## Create MonitorResponse (object)
+## Invalid Collection UID (object)
+
+
+### Properties
++ `error` (Error97, required) 
+
+
+## Monitor Created (object)
 
 
 ### Properties
@@ -1861,21 +1875,14 @@ catch (e) { }` (string, required)
 + `schedule`: `Updated Monitor Name` (Schedule86, required) 
 
 
-## Update MonitorResponse (object)
+## Monitor Updated (object)
 
 
 ### Properties
 + `monitor` (Monitor103, required) 
 
 
-## Delete MonitorErrorResponse (object)
-
-
-### Properties
-+ `error` (Error37, required) 
-
-
-## Delete MonitorResponse (object)
+## Monitor Deleted (object)
 
 
 ### Properties
@@ -1890,7 +1897,7 @@ catch (e) { }` (string, required)
 + `uid`: `5852-1e6b8957-35f9-42a0-8d2f-f03d7085b3d2` (string, required) 
 
 
-## Run a MonitorResponse (object)
+## Monitor Run with Errors (object)
 
 
 ### Properties
@@ -2045,7 +2052,7 @@ catch (e) { }` (string, required)
 + `Status code is 400`: `false` (boolean, required) 
 
 
-## API Key OwnerResponse (object)
+## Valid Response130 (object)
 
 
 ### Properties

@@ -7,12 +7,9 @@
   },
   "item": [
     {
-      "_postman_id": "2483749-22d133ce-16b9-4a5d-1a84-27a97ee52744",
       "name": "Collections",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2483749-4fcf43bf-ab4c-55cd-815c-daa0fdf0894f",
           "name": "All Collections",
           "event": [
             {
@@ -35,6 +32,7 @@
               }
             }
           ],
+          "_postman_id": "2483749-4fcf43bf-ab4c-55cd-815c-daa0fdf0894f",
           "request": {
             "method": "GET",
             "header": [
@@ -43,10 +41,6 @@
                 "value": "{{postman_api_key}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "https://api.getpostman.com/collections",
             "description": "The `/collections` endpoint returns a list of all [collections](https://www.getpostman.com/docs/collections) that are accessible by you. The list includes your own collections and the collections that you have subscribed to.\n\nThe response contains an array of collection information containing the `name`, `id`, `owner` and `uid` of each collection.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter."
           },
@@ -62,10 +56,6 @@
                     "value": "{{postman_api_key}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "https://api.getpostman.com/collections"
               },
               "status": "OK",
@@ -176,7 +166,6 @@
           ]
         },
         {
-          "_postman_id": "2483749-075daccc-5c32-cd89-4ac1-2cbe73ea6137",
           "name": "Single Collection ",
           "event": [
             {
@@ -199,6 +188,7 @@
               }
             }
           ],
+          "_postman_id": "2483749-075daccc-5c32-cd89-4ac1-2cbe73ea6137",
           "request": {
             "method": "GET",
             "header": [
@@ -207,10 +197,6 @@
                 "value": "{{postman_api_key}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "https://api.getpostman.com/collections/{{collection_uid}}",
             "description": "Access the contents of a collection that is accessible to you using its unique id (`uid`).\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter."
           },
@@ -226,10 +212,6 @@
                     "value": "{{postman_api_key}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "https://api.getpostman.com/collections/{{collection_uid}}"
               },
               "status": "OK",
@@ -340,8 +322,8 @@
           ]
         },
         {
-          "_postman_id": "2483749-a24b762a-2d86-d6a3-46f3-4a882f714468",
           "name": "Create Collection",
+          "_postman_id": "2483749-a24b762a-2d86-d6a3-46f3-4a882f714468",
           "request": {
             "method": "POST",
             "header": [
@@ -713,8 +695,8 @@
           ]
         },
         {
-          "_postman_id": "2483749-2d676d93-1945-93d3-27de-ec20ed99d94a",
           "name": "Update Collection",
+          "_postman_id": "2483749-2d676d93-1945-93d3-27de-ec20ed99d94a",
           "request": {
             "method": "PUT",
             "header": [
@@ -1326,8 +1308,8 @@
           ]
         },
         {
-          "_postman_id": "2483749-82162e1c-d756-3747-1103-9b0e03d5f11f",
           "name": "Delete Collection",
+          "_postman_id": "2483749-82162e1c-d756-3747-1103-9b0e03d5f11f",
           "request": {
             "method": "DELETE",
             "header": [
@@ -1578,15 +1560,13 @@
             }
           ]
         }
-      ]
+      ],
+      "_postman_id": "2483749-22d133ce-16b9-4a5d-1a84-27a97ee52744"
     },
     {
-      "_postman_id": "2483749-12c67781-d595-0359-64c7-3b2ea4968575",
       "name": "Environments",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2483749-b6a2da43-2904-63ec-8f66-46fed73555dd",
           "name": "All Environments",
           "event": [
             {
@@ -1609,6 +1589,7 @@
               }
             }
           ],
+          "_postman_id": "2483749-b6a2da43-2904-63ec-8f66-46fed73555dd",
           "request": {
             "method": "GET",
             "header": [
@@ -1617,10 +1598,6 @@
                 "value": "{{postman_api_key}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "https://api.getpostman.com/environments",
             "description": "The `/environments` endpoint returns a list of all [environments](https://www.getpostman.com/docs/environments) that belong to you..\n\nThe response contains an array of environments' information containing the `name`, `id`, `owner` and `uid` of each environment.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter."
           },
@@ -1636,10 +1613,6 @@
                     "value": "{{postman_api_key}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "https://api.getpostman.com/environments"
               },
               "status": "OK",
@@ -1750,7 +1723,6 @@
           ]
         },
         {
-          "_postman_id": "2483749-819de443-ed43-ec30-82dd-4572a10f9dff",
           "name": "Single Environment",
           "event": [
             {
@@ -1773,6 +1745,7 @@
               }
             }
           ],
+          "_postman_id": "2483749-819de443-ed43-ec30-82dd-4572a10f9dff",
           "request": {
             "method": "GET",
             "header": [
@@ -1781,10 +1754,6 @@
                 "value": "{{postman_api_key}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "https://api.getpostman.com/environments/{{environment_uid}}",
             "description": "Access the contents of an environment that is accessible to you using its unique id (`uid`).\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter."
           },
@@ -1800,10 +1769,6 @@
                     "value": "{{postman_api_key}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "https://api.getpostman.com/environments/{{environment_uid}}"
               },
               "status": "OK",
@@ -1914,8 +1879,8 @@
           ]
         },
         {
-          "_postman_id": "2483749-3b77b94d-9025-8614-bb40-0e423ffd118e",
           "name": "Create Environment",
+          "_postman_id": "2483749-3b77b94d-9025-8614-bb40-0e423ffd118e",
           "request": {
             "method": "POST",
             "header": [
@@ -2175,8 +2140,8 @@
           ]
         },
         {
-          "_postman_id": "2483749-ed5807cb-40e8-5199-1827-775f4d69a71e",
           "name": "Update Environment",
+          "_postman_id": "2483749-ed5807cb-40e8-5199-1827-775f4d69a71e",
           "request": {
             "method": "PUT",
             "header": [
@@ -2448,8 +2413,8 @@
           ]
         },
         {
-          "_postman_id": "2483749-204f2885-8a79-a86d-6567-af88a7583b9b",
           "name": "Delete Environment",
+          "_postman_id": "2483749-204f2885-8a79-a86d-6567-af88a7583b9b",
           "request": {
             "method": "DELETE",
             "header": [
@@ -2458,10 +2423,6 @@
                 "value": "{{postman_api_key}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "https://api.getpostman.com/environments/{{environment_uid}}",
             "description": "This endpoint allows you to delete a single environment based on an environment's unique `uid`.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter."
           },
@@ -2477,10 +2438,6 @@
                     "value": "{{postman_api_key}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "https://api.getpostman.com/environments/{{environment_uid}}"
               },
               "status": "Not Found",
@@ -2593,10 +2550,6 @@
                     "value": "{{postman_api_key}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "https://api.getpostman.com/environments/{{environment_uid}}"
               },
               "status": "OK",
@@ -2700,16 +2653,15 @@
             }
           ]
         }
-      ]
+      ],
+      "_postman_id": "2483749-12c67781-d595-0359-64c7-3b2ea4968575"
     },
     {
-      "_postman_id": "2483749-9c845d10-9bf9-4e08-b46f-2640cb6b98d0",
       "name": "Mocks",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2483749-219d8814-7272-232b-f2fa-9743f8c6f361",
           "name": "All Mocks",
+          "_postman_id": "2483749-219d8814-7272-232b-f2fa-9743f8c6f361",
           "request": {
             "method": "GET",
             "header": [
@@ -2833,8 +2785,8 @@
           ]
         },
         {
-          "_postman_id": "2483749-15cf7ac4-28e1-d185-da92-ccd4feb872d0",
           "name": "Single Mock",
+          "_postman_id": "2483749-15cf7ac4-28e1-d185-da92-ccd4feb872d0",
           "request": {
             "method": "GET",
             "header": [
@@ -2958,8 +2910,8 @@
           ]
         },
         {
-          "_postman_id": "2483749-3634b197-f561-b9b8-2c68-baccfa76aa3f",
           "name": "Create Mock",
+          "_postman_id": "2483749-3634b197-f561-b9b8-2c68-baccfa76aa3f",
           "request": {
             "method": "POST",
             "header": [
@@ -3092,8 +3044,8 @@
           ]
         },
         {
-          "_postman_id": "2483749-bf8178d8-0937-f458-6bd4-b2c570015f3a",
           "name": "Delete Mock",
+          "_postman_id": "2483749-bf8178d8-0937-f458-6bd4-b2c570015f3a",
           "request": {
             "method": "DELETE",
             "header": [
@@ -3216,16 +3168,15 @@
             }
           ]
         }
-      ]
+      ],
+      "_postman_id": "2483749-9c845d10-9bf9-4e08-b46f-2640cb6b98d0"
     },
     {
-      "_postman_id": "2483749-d968b758-5e18-5e93-dcdb-e736c6817134",
       "name": "Monitors",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2483749-1f7cd090-28db-8bd0-c0f5-01fc6b6b0f8d",
           "name": "All Monitors",
+          "_postman_id": "2483749-1f7cd090-28db-8bd0-c0f5-01fc6b6b0f8d",
           "request": {
             "method": "GET",
             "header": [
@@ -3234,10 +3185,6 @@
                 "value": "{{postman_api_key}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "https://api.getpostman.com/monitors",
             "description": "The `/monitors` endpoint returns a list of all [monitors](https://monitor.getpostman.com/) that are accessible by you.\n\nThe response contains an array of monitors information containing the `name`, `id`, `owner` and `uid` of each monitor.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter."
           },
@@ -3253,10 +3200,6 @@
                     "value": "{{postman_api_key}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "https://api.getpostman.com/monitors"
               },
               "status": "OK",
@@ -3380,8 +3323,8 @@
           ]
         },
         {
-          "_postman_id": "2483749-616908f1-65df-4332-d5b3-b2a2a73830fc",
           "name": "Single Monitor",
+          "_postman_id": "2483749-616908f1-65df-4332-d5b3-b2a2a73830fc",
           "request": {
             "method": "GET",
             "header": [
@@ -3390,10 +3333,6 @@
                 "value": "{{postman_api_key}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "https://api.getpostman.com/monitors/{{monitor_uid}}",
             "description": "This endpoint fetches you basic information about the monitor using its `uid`.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter."
           },
@@ -3409,10 +3348,6 @@
                     "value": "{{postman_api_key}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "https://api.getpostman.com/monitors/{{monitor_uid}}"
               },
               "status": "Not Found",
@@ -3544,10 +3479,6 @@
                     "value": "{{postman_api_key}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "https://api.getpostman.com/monitors/{{monitor_uid}}"
               },
               "status": "OK",
@@ -3671,8 +3602,8 @@
           ]
         },
         {
-          "_postman_id": "2483749-4212e5c0-aa25-ee88-18ad-4f0565e2d73f",
           "name": "Create Monitor",
+          "_postman_id": "2483749-4212e5c0-aa25-ee88-18ad-4f0565e2d73f",
           "request": {
             "method": "POST",
             "header": [
@@ -4424,257 +4355,7 @@
                 ],
                 "body": {
                   "mode": "formdata",
-                  "formdata": [
-                    "{",
-                    "\n",
-                    "\t",
-                    "\"",
-                    "m",
-                    "o",
-                    "n",
-                    "i",
-                    "t",
-                    "o",
-                    "r",
-                    "\"",
-                    ":",
-                    " ",
-                    "{",
-                    "\n",
-                    "\t",
-                    "\t",
-                    "\"",
-                    "n",
-                    "a",
-                    "m",
-                    "e",
-                    "\"",
-                    ":",
-                    " ",
-                    "\"",
-                    "M",
-                    "o",
-                    "n",
-                    "i",
-                    "t",
-                    "o",
-                    "r",
-                    " ",
-                    "N",
-                    "a",
-                    "m",
-                    "e",
-                    "\"",
-                    ",",
-                    "\n",
-                    "\t",
-                    "\t",
-                    "\"",
-                    "s",
-                    "c",
-                    "h",
-                    "e",
-                    "d",
-                    "u",
-                    "l",
-                    "e",
-                    "\"",
-                    ":",
-                    " ",
-                    "{",
-                    "\n",
-                    "\t",
-                    "\t",
-                    "\t",
-                    "\"",
-                    "c",
-                    "r",
-                    "o",
-                    "n",
-                    "\"",
-                    ":",
-                    " ",
-                    "\"",
-                    "*",
-                    "/",
-                    "1",
-                    "0",
-                    " ",
-                    "*",
-                    " ",
-                    "*",
-                    " ",
-                    "*",
-                    " ",
-                    "*",
-                    "\"",
-                    ",",
-                    "\n",
-                    "\t",
-                    "\t",
-                    "\t",
-                    "\"",
-                    "t",
-                    "i",
-                    "m",
-                    "e",
-                    "z",
-                    "o",
-                    "n",
-                    "e",
-                    "\"",
-                    ":",
-                    " ",
-                    "\"",
-                    "A",
-                    "m",
-                    "e",
-                    "r",
-                    "i",
-                    "c",
-                    "a",
-                    "/",
-                    "C",
-                    "h",
-                    "i",
-                    "c",
-                    "a",
-                    "g",
-                    "o",
-                    "\"",
-                    "\n",
-                    "\t",
-                    "\t",
-                    "}",
-                    ",",
-                    "\n",
-                    "\t",
-                    "\t",
-                    "\"",
-                    "c",
-                    "o",
-                    "l",
-                    "l",
-                    "e",
-                    "c",
-                    "t",
-                    "i",
-                    "o",
-                    "n",
-                    "\"",
-                    ":",
-                    " ",
-                    "\"",
-                    "5",
-                    "8",
-                    "5",
-                    "2",
-                    "-",
-                    "8",
-                    "d",
-                    "0",
-                    "5",
-                    "d",
-                    "d",
-                    "8",
-                    "5",
-                    "-",
-                    "2",
-                    "2",
-                    "2",
-                    "c",
-                    "-",
-                    "1",
-                    "4",
-                    "5",
-                    "2",
-                    "-",
-                    "5",
-                    "5",
-                    "3",
-                    "b",
-                    "-",
-                    "e",
-                    "7",
-                    "6",
-                    "a",
-                    "5",
-                    "3",
-                    "1",
-                    "b",
-                    "7",
-                    "1",
-                    "e",
-                    "d",
-                    "\"",
-                    ",",
-                    "\n",
-                    "\t",
-                    "\t",
-                    "\"",
-                    "e",
-                    "n",
-                    "v",
-                    "i",
-                    "r",
-                    "o",
-                    "n",
-                    "m",
-                    "e",
-                    "n",
-                    "t",
-                    "\"",
-                    ":",
-                    " ",
-                    "\"",
-                    "5",
-                    "8",
-                    "5",
-                    "2",
-                    "-",
-                    "8",
-                    "a",
-                    "4",
-                    "c",
-                    "2",
-                    "1",
-                    "e",
-                    "a",
-                    "-",
-                    "2",
-                    "a",
-                    "3",
-                    "6",
-                    "-",
-                    "4",
-                    "0",
-                    "d",
-                    "1",
-                    "-",
-                    "a",
-                    "8",
-                    "2",
-                    "d",
-                    "-",
-                    "d",
-                    "7",
-                    "1",
-                    "7",
-                    "f",
-                    "a",
-                    "c",
-                    "9",
-                    "d",
-                    "6",
-                    "e",
-                    "f",
-                    "\"",
-                    "\n",
-                    "\t",
-                    "}",
-                    "\n",
-                    "}"
-                  ]
+                  "formdata": []
                 },
                 "url": "https://api.getpostman.com/monitors"
               },
@@ -4799,8 +4480,8 @@
           ]
         },
         {
-          "_postman_id": "2483749-2505bdcd-db18-775b-3c8c-a44080d9c4c4",
           "name": "Update Monitor",
+          "_postman_id": "2483749-2505bdcd-db18-775b-3c8c-a44080d9c4c4",
           "request": {
             "method": "PUT",
             "header": [
@@ -4966,8 +4647,8 @@
           ]
         },
         {
-          "_postman_id": "2483749-2ebffa5c-ce9a-20c3-0046-fd3faeff2d2b",
           "name": "Delete Monitor",
+          "_postman_id": "2483749-2ebffa5c-ce9a-20c3-0046-fd3faeff2d2b",
           "request": {
             "method": "DELETE",
             "header": [
@@ -5275,8 +4956,8 @@
           ]
         },
         {
-          "_postman_id": "2483749-5c95b772-f442-0a2a-a575-e3571d10722e",
           "name": "Run a Monitor",
+          "_postman_id": "2483749-5c95b772-f442-0a2a-a575-e3571d10722e",
           "request": {
             "method": "POST",
             "header": [
@@ -5285,10 +4966,6 @@
                 "value": "{{postman_api_key}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "https://api.getpostman.com/monitors/{{monitor_uid}}/run",
             "description": "This endpoint will run the monitor instantly and wait for the monitor to run completely. It responds with the run results.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter."
           },
@@ -5304,10 +4981,6 @@
                     "value": "{{postman_api_key}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "https://api.getpostman.com/monitors/{{monitor_uid}}/run"
               },
               "status": "OK",
@@ -5448,10 +5121,6 @@
                     "value": "{{postman_api_key}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "https://api.getpostman.com/monitors/{{monitor_uid}}/run"
               },
               "status": "OK",
@@ -5583,15 +5252,13 @@
             }
           ]
         }
-      ]
+      ],
+      "_postman_id": "2483749-d968b758-5e18-5e93-dcdb-e736c6817134"
     },
     {
-      "_postman_id": "2483749-a9794170-4ba0-0424-00d7-17b70e524cfb",
       "name": "User",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2483749-ea22841e-ceac-d8fe-e630-bbc6e8f827bf",
           "name": "API Key Owner",
           "event": [
             {
@@ -5615,6 +5282,7 @@
               }
             }
           ],
+          "_postman_id": "2483749-ea22841e-ceac-d8fe-e630-bbc6e8f827bf",
           "request": {
             "method": "GET",
             "header": [
@@ -5623,10 +5291,6 @@
                 "value": "{{postman_api_key}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "https://api.getpostman.com/me",
             "description": "The `/me` endpoint allows you to fetch relevant information pertaining to the API Key being used.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter."
           },
@@ -5642,10 +5306,6 @@
                     "value": "{{postman_api_key}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "https://api.getpostman.com/me"
               },
               "status": "OK",
@@ -5755,7 +5415,8 @@
             }
           ]
         }
-      ]
+      ],
+      "_postman_id": "2483749-a9794170-4ba0-0424-00d7-17b70e524cfb"
     }
   ]
 }

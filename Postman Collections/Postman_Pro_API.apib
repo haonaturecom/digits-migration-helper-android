@@ -1124,7 +1124,7 @@ For more information about the format of the `timezone` value, check this [list 
 
         Bad Request
 
-    + Attributes (Invalid Timezone)
+    + Attributes (Parameter Missing)
 
 
     + Body
@@ -1931,6 +1931,13 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 + `timezone` (string, required) 
 
 
+## Parameter Missing (object)
+
+
+### Properties
++ `error` (Error11, required) 
+
+
 ## Error11 (object)
 
 
@@ -1945,13 +1952,6 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 ### Properties
 + `param` (string, required) 
-
-
-## Cron Pattern Not Allowed (object)
-
-
-### Properties
-+ `error` (Error12, required) 
 
 
 ## Error12 (object)
@@ -1970,13 +1970,6 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 + `pattern` (string, required) 
 
 
-## Invalid Timezone (object)
-
-
-### Properties
-+ `error` (Error11, required) 
-
-
 ## Error14 (object)
 
 
@@ -1992,13 +1985,6 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 ### Properties
 + `param` (string, required) 
 + `uid` (string, required) 
-
-
-## Invalid Collection UID (object)
-
-
-### Properties
-+ `error` (Error14, required) 
 
 
 ## Monitor Created (object)

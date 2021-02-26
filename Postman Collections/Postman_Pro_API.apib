@@ -322,6 +322,85 @@ Note: Please be careful when trying to update the collection, as the existing co
     + Attributes (Update Collection Request)
 
 
+    + Body
+
+            {
+                "collection": {
+                    "variables": [],
+                    "info": {
+                        "name": "Sample Collection",
+                        "_postman_id": "ac03df1d-90f0-401d-aa57-39c395253c80",
+                        "description": "This is just a sample collection.",
+                        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+                    },
+                    "item": [
+                        {
+                            "_postman_id": "da6d7eb6-9ee3-4522-aa01-6d7c738ecd56",
+                            "name": "This is a folder",
+                            "description": "",
+                            "item": [
+                                {
+                                    "_postman_id": "b5e8d7dd-909c-4ba7-aef4-8609bc50b586",
+                                    "name": "Sample POST Request",
+                                    "request": {
+                                        "url": "echo.getpostman.com/post",
+                                        "method": "POST",
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json",
+                                                "description": ""
+                                            }
+                                        ],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n\t\"data\": \"123\"\n}"
+                                        },
+                                        "description": "This is a sample POST Request"
+                                    },
+                                    "response": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "This is a second folder",
+                            "description": "This is the second folder",
+                            "item": []
+                        },
+                        {
+                            "_postman_id": "3ec1d8a6-744e-459d-a92d-96b0d59eb2d9",
+                            "name": "Sample GET Request",
+                            "request": {
+                                "url": "echo.getpostman.com/get",
+                                "method": "GET",
+                                "header": [],
+                                "body": {
+                                    "mode": "formdata",
+                                    "formdata": []
+                                },
+                                "description": "This is a sample GET Request"
+                            },
+                            "response": []
+                        },
+                        {
+                            "_postman_id": "10928357-744e-459d-a92d-96b0d5109453",
+                            "name": "This is the second request",
+                            "request": {
+                                "url": "echo.getpostman.com/post",
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "formdata",
+                                    "formdata": []
+                                },
+                                "description": "This is the second request"
+                            },
+                            "response": []
+                        }
+                    ]
+                }
+            }
+
 
 + Response 404 (application/json; charset=utf-8)
 
@@ -1313,6 +1392,18 @@ For more information about the format of the `timezone` value, check this [list 
 
     + Attributes (Update Monitor Request)
 
+
+    + Body
+
+            {
+                "monitor": {
+                    "name": "Updated Monitor Name",
+                    "schedule": {
+                        "cron": "*/5 * * * *",
+                        "timezone": "America/Chicago"
+                    }
+                }
+            }
 
 
 + Response 200 (application/json; charset=utf-8)

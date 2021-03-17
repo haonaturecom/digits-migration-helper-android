@@ -1808,6 +1808,13 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 + `id` (string, required) 
 
 
+## Collection Already Exists1 (object)
+
+
+### Properties
++ `error` (Error2, required) 
+
+
 ## Update Collection Request (object)
 
 
@@ -1854,6 +1861,13 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 
 ## Not Enough Permissions1 (object)
+
+
+### Properties
++ `error` (Error, required) 
+
+
+## Collection ID Mismatch1 (object)
 
 
 ### Properties
@@ -2186,6 +2200,20 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 + `pattern` (string, required) 
 
 
+## Cron Pattern Not Allowed1 (object)
+
+
+### Properties
++ `error` (Error24, required) 
+
+
+## Invalid Timezone1 (object)
+
+
+### Properties
++ `error` (Error22, required) 
+
+
 ## Error28 (object)
 
 
@@ -2201,6 +2229,20 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 ### Properties
 + `param` (string, required) 
 + `uid` (string, required) 
+
+
+## Invalid Environment UID1 (object)
+
+
+### Properties
++ `error` (Error28, required) 
+
+
+## Invalid Collection UID1 (object)
+
+
+### Properties
++ `error` (Error28, required) 
 
 
 ## Monitor Created (object)
@@ -2409,6 +2451,13 @@ The `/me` endpoint allows you to fetch relevant information pertaining to the AP
 
 ### Properties
 + `Status code is 400` (boolean, required) 
+
+
+## Monitor Run with No Errors (object)
+
+
+### Properties
++ `run` (Run1, required) 
 
 
 ## Run1 (object)
